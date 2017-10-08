@@ -3,11 +3,24 @@
 
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
-A: *Student should provide answer here*
+A: Naked Twins is a constraint found while solving Soduku where two boxes (of a UNIT - either row, square, column or diagonal) 
+have exactly two and same options. This effectively contraints other box in that UNIT 
+to have any of the two digits which are already contained in naked twins.
+<BR>
+Contraint propogation was used to solve the naked twins problem by removing the values of twins (both digits) from all the 
+remaining boxes in the UNIT.
+<BR>
+<BR>**Sample:**
+<BR>Found a twin:  57 ['B2', 'F6'] ['A1', 'B2', 'C3', 'D4', 'E5', 'F6', 'G7', 'H8', 'I9'] ['2', '57', '1', '457', '9', '57', '8', '6', '3']
+<BR>After reduction of twin:  57 ['B2', 'F6'] ['A1', 'B2', 'C3', 'D4', 'E5', 'F6', 'G7', 'H8', 'I9'] ['2', '57', '1', '4', '9', '57', '8', '6', '3']
+
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Student should provide answer here*
+A: Constraint propogation was used to solve diagonal Sudoku problem by adding two diagonal UNITs in the initial initialization.
+This ensured that 
+<li>all constraints like peers of a particular box etc were found based on diagonal constraints
+<li>all strategies like Eliminate, Only Choice and Naked Twins are also applied on diagonal constraints
 
 ### Install
 
